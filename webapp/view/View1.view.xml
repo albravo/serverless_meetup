@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="slfrontend.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+      xmlns:core="sap.ui.core"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <List headerText="Hotels" mode="Delete" items="{path: '/'}" >
+                        <CustomListItem>
+                            <HBox>
+                                <core:Icon size="2rem" src="sap-icon://building" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" color="{path:'', formatter: '.getRandomColor'}"/>
+                                <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+                                    <Link text="{NAME}" target="{ProductPicUrl}" press="handlePress"/>
+                                    <Label text="{CITY}"/>
+                                </VBox>
+                            </HBox>
+                        </CustomListItem>
+	                </List>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
